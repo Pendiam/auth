@@ -31,14 +31,35 @@ session_start();
                 <input type="text" name="username" id="username">
             </div>
             <div>
+                <?php
+                if (isset($errors[1])) {
+                    foreach ($errors[1] as $emailErrors) {
+                        echo "<p class='alert-error'>" . $emailErrors . "</p>";
+                    }
+                }
+                ?>
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email">
             </div>
             <div>
+            <?php
+                if (isset($errors[2])) {
+                    foreach ($errors[2] as $passErrors) {
+                        echo "<p class='alert-error'>" . $passErrors . "</p>";
+                    }
+                }
+                ?>
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password">
             </div>
             <div>
+            <?php
+                if (isset($errors[3])) {
+                    foreach ($errors[3] as $pass2Errors) {
+                        echo "<p class='alert-error'>" . $pass2Errors . "</p>";
+                    }
+                }
+                ?>
                 <label for="password2">Password Again:</label>
                 <input type="password" name="password2" id="password2">
             </div>
