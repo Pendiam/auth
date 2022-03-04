@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../conf/db.php';
 
 function db(): PDO
 {
@@ -10,7 +10,7 @@ function db(): PDO
             DB_PASSWORD,
             [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
         );
-        echo "Connected successfully";
+        // echo "Connected successfully";
     } catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
