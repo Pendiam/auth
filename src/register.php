@@ -29,4 +29,8 @@ if (isset($_REQUEST['btnRegister'])) {
         $errors[4][] = "You need to agree to the term of services to register";
     }
 
+    if(empty($errors)){
+        
+    }
+
 }
